@@ -25,43 +25,50 @@
   <h1>Sign Up</h1>
   <form class="form-horizontal">
     <div class="form-group">
-      <label class="control-label col-xs-3" for="inputEmail">Email:</label>
+      <label class="control-label col-xs-3" for="inputId">아이디:</label>
       <div class="col-xs-9">
-        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+        <input type="text" class="form-control" id="inputId" placeholder="ID">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-xs-3" for="inputPassword">Password:</label>
+      <label class="control-label col-xs-3" for="inputPassword">비밀번호:</label>
       <div class="col-xs-9">
         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-xs-3" for="confirmPassword">Confirm Password:</label>
+      <label class="control-label col-xs-3" for="confirmPassword">비밀번호 확인:</label>
       <div class="col-xs-9">
         <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-xs-3" for="firstName">First Name:</label>
+      <label class="control-label col-xs-3" for="firstName">성:</label>
       <div class="col-xs-9">
         <input type="text" class="form-control" id="firstName" placeholder="First Name">
       </div>
     </div>
+
     <div class="form-group">
-      <label class="control-label col-xs-3" for="lastName">Last Name:</label>
+      <label class="control-label col-xs-3" for="lastName">이름:</label>
       <div class="col-xs-9">
         <input type="text" class="form-control" id="lastName" placeholder="Last Name">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-xs-3" for="phoneNumber">Phone:</label>
+      <label class="control-label col-xs-3" for="inputEmail">E-mail:</label>
+      <div class="col-xs-9">
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-3" for="phoneNumber">전화번호:</label>
       <div class="col-xs-9">
         <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone Number">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-xs-3">Date of Birth:</label>
+      <label class="control-label col-xs-3">생년월일:</label>
       <div class="col-xs-3">
         <select class="form-control">
           <option>Date</option>
@@ -79,49 +86,28 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-xs-3" for="postalAddress">Address:</label>
+      <label class="control-label col-xs-3" for="postalAddress">주소:</label>
       <div class="col-xs-9">
         <textarea rows="3" class="form-control" id="postalAddress" placeholder="Postal Address"></textarea>
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-xs-3" for="ZipCode">Zip Code:</label>
-      <div class="col-xs-9">
-        <input type="text" class="form-control" id="ZipCode" placeholder="Zip Code">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-xs-3">Gender:</label>
+      <label class="control-label col-xs-3">성별:</label>
       <div class="col-xs-2">
         <label class="radio-inline">
-          <input type="radio" name="genderRadios" value="male"> Male
+          <input type="radio" name="genderRadios" value="male"> 남자
         </label>
       </div>
       <div class="col-xs-2">
         <label class="radio-inline">
-          <input type="radio" name="genderRadios" value="female"> Female
-        </label>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-xs-offset-3 col-xs-9">
-        <label class="checkbox-inline">
-          <input type="checkbox" value="news"> Send me latest news and updates.
-        </label>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-xs-offset-3 col-xs-9">
-        <label class="checkbox-inline">
-          <input type="checkbox" value="agree">  I agree to the <a href="#">Terms and Conditions</a>.
+          <input type="radio" name="genderRadios" value="female"> 여자
         </label>
       </div>
     </div>
     <br>
     <div class="form-group">
       <div class="col-xs-offset-3 col-xs-9">
-        <input type="submit" class="btn btn-primary" value="Submit">
-        <input type="reset" class="btn btn-default" value="Reset">
+        <input type="submit" class="btn btn-primary" value="회원가입">
       </div>
     </div>
   </form>
