@@ -1,27 +1,51 @@
 /*
-	Highlights by HTML5 UP
+	Landed by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 /* Basic */
 
-	body, html {
+	body {
+		color: #ffffff;
+	}
+
+	body, html, #page-wrapper {
 		height: 100%;
 	}
 
-	html {
-		background: none;
+	blockquote {
+		border-left: solid 4px #606067;
 	}
 
-/* List */
-
-	ul.actions li {
-		padding: 0 0 0 1em;
+	code {
+		background: #32333b;
 	}
 
-		ul.actions li:first-child {
-			padding-left: 0;
+	hr {
+		border-bottom: solid 1px #606067;
+	}
+
+/* Icon */
+
+	.icon.major {
+		-ms-behavior: url("assets/js/ie/PIE.htc");
+	}
+
+/* Image */
+
+	.image {
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
+	}
+
+		.image:before {
+			display: none;
+		}
+
+		.image img {
+			position: relative;
+			-ms-behavior: url("assets/js/ie/PIE.htc");
 		}
 
 /* Form */
@@ -31,9 +55,17 @@
 	input[type="email"],
 	select,
 	textarea {
-		border: solid 2px #dddddd;
 		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
 	}
+
+		input[type="text"]:focus,
+		input[type="password"]:focus,
+		input[type="email"]:focus,
+		select:focus,
+		textarea:focus {
+			-ms-behavior: url("assets/js/ie/PIE.htc");
+		}
 
 	input[type="text"],
 	input[type="password"],
@@ -51,97 +83,112 @@
 			display: none;
 		}
 
+/* Table */
+
+	table tbody tr {
+		border: solid 1px #606067;
+	}
+
+	table thead {
+		border-bottom: solid 1px #606067;
+	}
+
+	table tfoot {
+		border-top: solid 1px #606067;
+	}
+
+	table.alt tbody tr td {
+		border: solid 1px #606067;
+	}
+
 /* Button */
 
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
-	button,
 	.button {
-		border: solid 2px #dddddd;
+		border: solid 1px #ffffff !important;
 	}
 
-/* Main BG */
-
-	.main-bg {
-		z-index: 0;
-	}
-
-/* Main */
-
-	.main {
-		background-size: cover;
-	}
-
-		.main .container {
-			background: #fff;
-			border-top: solid 1px #dddddd;
-			position: relative;
-			z-index: 1;
+		input[type="submit"].special,
+		input[type="reset"].special,
+		input[type="button"].special,
+		.button.special {
+			border: 0 !important;
 		}
 
-		.main .goto-next {
-			text-decoration: none;
+/* Goto Next */
+
+	.goto-next {
+		display: none;
+	}
+
+/* Spotlight */
+
+	.spotlight {
+		height: 100%;
+	}
+
+		.spotlight .content {
+			background: #272833;
 		}
 
-			.main .goto-next:before {
-				-moz-osx-font-smoothing: grayscale;
-				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
-				font-style: normal;
-				font-weight: normal;
-				text-transform: none !important;
-			}
+/* Wrapper */
 
-			.main .goto-next:before {
-				color: #dddddd;
-				content: '\f063';
-				display: block;
-				font-size: 2em;
-				height: 2em;
-				left: 0;
-				line-height: 2em;
-				position: absolute;
-				text-align: center;
-				text-indent: 0;
-				top: 0;
-				width: 2em;
+	.wrapper.style2 input[type="text"]:focus,
+	.wrapper.style2 input[type="password"]:focus,
+	.wrapper.style2 input[type="email"]:focus,
+	.wrapper.style2 select:focus,
+	.wrapper.style2 textarea:focus {
+		border-color: #ffffff;
+	}
+
+	.wrapper.style2 input[type="submit"].special:hover, .wrapper.style2 input[type="submit"].special:active,
+	.wrapper.style2 input[type="reset"].special:hover,
+	.wrapper.style2 input[type="reset"].special:active,
+	.wrapper.style2 input[type="button"].special:hover,
+	.wrapper.style2 input[type="button"].special:active,
+	.wrapper.style2 .button.special:hover,
+	.wrapper.style2 .button.special:active {
+		color: #e44c65 !important;
+	}
+
+/* Dropotron */
+
+	.dropotron {
+		background: #272833;
+		box-shadow: none !important;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
+	}
+
+		.dropotron > li a, .dropotron > li span {
+			color: #ffffff !important;
+		}
+
+		.dropotron.level-0 {
+			margin-top: 0;
+		}
+
+			.dropotron.level-0:before {
+				display: none;
 			}
 
 /* Header */
 
 	#header {
-		-ms-behavior: url("assets/js/ie/backgroundsize.min.htc");
-		background-image: url("../../images/bg.jpg");
-		background-size: cover;
+		background: #272833;
+	}
+
+/* Banner */
+
+	#banner {
 		height: 100%;
 	}
 
-		#header:after {
-			min-height: 100%;
+		#banner:before {
+			height: 100%;
 		}
 
-		#header header {
-			position: relative;
-			z-index: 1;
-		}
-
-		#header .container {
-			background: #fff;
-			z-index: 1;
-		}
-
-/* Footer */
-
-	#footer {
-		-ms-behavior: url("assets/js/ie/backgroundsize.min.htc");
-		background-image: url("../../images/bg.jpg");
-		background-size: cover;
-	}
-
-		#footer .container {
-			background: #fff;
-			border-top: solid 1px #dddddd;
-			position: relative;
-			z-index: 1;
+		#banner:after {
+			background-image: url("images/ie/banner-overlay.png");
 		}

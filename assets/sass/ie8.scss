@@ -4,32 +4,57 @@
 @import 'libs/skel';
 
 /*
-	Highlights by HTML5 UP
+	Landed by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+	$color-border: mix(_palette(bg), _palette(fg-bold), 70);
+	$color-border-bg: mix(_palette(bg), _palette(fg-bold), 90);
+
 /* Basic */
 
-	body, html {
+	body {
+		color: _palette(fg-bold);
+	}
+
+	body, html, #page-wrapper {
 		height: 100%;
 	}
 
-	html {
-		background: none;
+	blockquote {
+		border-left: solid 4px $color-border;
 	}
 
-/* List */
+	code {
+		background: $color-border-bg;
+	}
 
-	ul {
-		&.actions {
-			li {
-				padding: 0 0 0 (_size(element-margin) * 0.5);
+	hr {
+		border-bottom: solid 1px $color-border;
+	}
 
-				&:first-child {
-					padding-left: 0;
-				}
-			}
+/* Icon */
+
+	.icon {
+		&.major {
+			-ms-behavior: url('assets/js/ie/PIE.htc');
+		}
+	}
+
+/* Image */
+
+	.image {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+
+		&:before {
+			display: none;
+		}
+
+		img {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
 		}
 	}
 
@@ -40,8 +65,12 @@
 	input[type="email"],
 	select,
 	textarea {
-		border: solid 2px _palette(border);
 		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+
+		&:focus {
+			-ms-behavior: url('assets/js/ie/PIE.htc');
+		}
 	}
 
 	input[type="text"],
@@ -53,10 +82,37 @@
 	input[type="checkbox"],
 	input[type="radio"] {
 		font-size: 3em;
-
 		& + label {
 			&:before {
 				display: none;
+			}
+		}
+	}
+
+/* Table */
+
+	table {
+		tbody {
+			tr {
+				border: solid 1px $color-border;
+			}
+		}
+
+		thead {
+			border-bottom: solid 1px $color-border;
+		}
+
+		tfoot {
+			border-top: solid 1px $color-border;
+		}
+
+		&.alt {
+			tbody {
+				tr {
+					td {
+						border: solid 1px $color-border;
+					}
+				}
 			}
 		}
 	}
@@ -66,45 +122,75 @@
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
-	button,
 	.button {
-		border: solid 2px _palette(border);
+		border: solid 1px _palette(fg-bold) !important;
+
+		&.special {
+			border: 0 !important;
+		}
 	}
 
-/* Main BG */
+/* Goto Next */
 
-	.main-bg {
-		z-index: 0;
+	.goto-next {
+		display: none;
 	}
 
-/* Main */
+/* Spotlight */
 
-	.main {
-		background-size: cover;
+	.spotlight {
+		height: 100%;
 
-		.container {
-			background: _palette(bg);
-			border-top: solid 1px _palette(border);
-			position: relative;
-			z-index: 1;
+		.content {
+			background: _palette(accent2);
+		}
+	}
+
+/* Wrapper */
+
+	.wrapper {
+		&.style2 {
+			input[type="text"],
+			input[type="password"],
+			input[type="email"],
+			select,
+			textarea {
+				&:focus {
+					border-color: _palette(fg-bold);
+				}
+			}
+
+			input[type="submit"],
+			input[type="reset"],
+			input[type="button"],
+			.button {
+				&.special {
+					&:hover, &:active {
+						color: _palette(accent1) !important;
+					}
+				}
+			}
+		}
+	}
+
+/* Dropotron */
+
+	.dropotron {
+		background: _palette(accent2);
+		box-shadow: none !important;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+
+		> li {
+			a, span {
+				color: _palette(fg-bold) !important;
+			}
 		}
 
-		.goto-next {
-			@include icon;
+		&.level-0 {
+			margin-top: 0;
 
 			&:before {
-				color: _palette(border);
-				content: '\f063';
-				display: block;
-				font-size: 2em;
-				height: 2em;
-				left: 0;
-				line-height: 2em;
-				position: absolute;
-				text-align: center;
-				text-indent: 0;
-				top: 0;
-				width: 2em;
+				display: none;
 			}
 		}
 	}
@@ -112,37 +198,19 @@
 /* Header */
 
 	#header {
-		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
-		background-image: url('../../images/bg.jpg');
-		background-size: cover;
-		height: 100%;
-
-		&:after {
-			min-height: 100%;
-		}
-
-		header {
-			position: relative;
-			z-index: 1;
-		}
-
-		.container {
-			background: _palette(bg);
-			z-index: 1;
-		}
+		background: _palette(accent2);
 	}
 
-/* Footer */
+/* Banner */
 
-	#footer {
-		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
-		background-image: url('../../images/bg.jpg');
-		background-size: cover;
+	#banner {
+		height: 100%;
 
-		.container {
-			background: _palette(bg);
-			border-top: solid 1px _palette(border);
-			position: relative;
-			z-index: 1;
+		&:before {
+			height: 100%;
+		}
+
+		&:after {
+			background-image: url('images/ie/banner-overlay.png');
 		}
 	}
